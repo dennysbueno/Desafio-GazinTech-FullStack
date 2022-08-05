@@ -63,6 +63,7 @@ export const ModalNiveisCreate = () => {
                   placeholder="Nivel"
                   value={nivel}
                   onChange={(e) => setNivel(e.target.value)}
+                  required
                 />
               </FormControl>
             </form>

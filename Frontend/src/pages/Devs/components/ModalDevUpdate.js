@@ -87,6 +87,7 @@ export const ModalDevUpdate = ({ dev }) => {
                   placeholder="Nome"
                   value={nome}
                   onChange={(e) => setNome(e.target.value)}
+                  required
                 />
               </FormControl>
 
@@ -96,6 +97,7 @@ export const ModalDevUpdate = ({ dev }) => {
                   placeholder="Sobrenome"
                   value={sobrenome}
                   onChange={(e) => setSobrenome(e.target.value)}
+                  required
                 />
               </FormControl>
 
@@ -105,6 +107,7 @@ export const ModalDevUpdate = ({ dev }) => {
                   placeholder="Sexo"
                   value={sexo}
                   onChange={(e) => setSexo(e.target.value)}
+                  required
                 />
               </FormControl>
 
@@ -115,15 +118,18 @@ export const ModalDevUpdate = ({ dev }) => {
                   placeholder="Data de Nascimento"
                   value={data_nascimento}
                   onChange={(e) => setData_nascimento(e.target.value)}
+                  required
                 />
               </FormControl>
 
               <FormControl mt={4}>
                 <FormLabel>Idade</FormLabel>
                 <Input
+                  type="number"
                   placeholder="Idade"
                   value={idade}
                   onChange={(e) => setIdade(e.target.value)}
+                  required
                 />
               </FormControl>
 
@@ -133,6 +139,7 @@ export const ModalDevUpdate = ({ dev }) => {
                   placeholder="Equipe"
                   value={equipe}
                   onChange={(e) => setEquipe(e.target.value)}
+                  required
                 />
               </FormControl>
 

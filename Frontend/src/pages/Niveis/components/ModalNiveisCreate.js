@@ -22,7 +22,8 @@ export const ModalNiveisCreate = () => {
 
   const [nivel, setNivel] = useState();
 
-  async function NovoNivel() {
+  async function NovoNivel(e) {
+    e.preventDefault()
     const data = {
       nivel,
     };
@@ -33,6 +34,8 @@ export const ModalNiveisCreate = () => {
       })
       .catch(() => {
         alert("Erro no cadastro, tente novamente.");
+      }).finally(() =>{
+        window.location.reload()
       });
   }
 

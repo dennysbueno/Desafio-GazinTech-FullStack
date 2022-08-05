@@ -21,13 +21,16 @@ export const ModalNiveisUpdate = ({ nivel }) => {
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
 
-  const handleUpdate = () => {
+  const handleUpdate = (e) => {
+    e.preventDefault()
     updateNivel(nivel.id, { nivel: nivelUpdate })
       .then(() => {
         alert("Editado com Sucesso");
       })
       .catch(() => {
         alert("Erro ao editar");
+      }).finally(() =>{
+        window.location.reload()
       });
   };
 

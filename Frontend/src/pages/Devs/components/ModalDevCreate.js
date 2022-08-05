@@ -44,7 +44,8 @@ export const ModalDevCreate = () => {
       });
   }, []);
 
-  async function NovoDev() {
+  async function NovoDev(e) {
+    e.preventDefault()
     const data = {
       nome,
       sobrenome,
@@ -61,6 +62,8 @@ export const ModalDevCreate = () => {
       })
       .catch(() => {
         alert("Erro no cadastro, tente novamente.");
+      }).finally(() =>{
+        window.location.reload()
       });
   }
 

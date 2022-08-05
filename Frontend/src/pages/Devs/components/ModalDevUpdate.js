@@ -40,7 +40,8 @@ export const ModalDevUpdate = ({ dev }) => {
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
 
-  const handleUpdate = () => {
+  const handleUpdate = (e) => {
+    e.preventDefault()
     const data = {
       nome,
       sobrenome,
@@ -57,6 +58,8 @@ export const ModalDevUpdate = ({ dev }) => {
       })
       .catch(() => {
         alert("Erro ao editar");
+      }).finally(() =>{
+        window.location.reload()
       });
   };
 
